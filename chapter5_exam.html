@@ -19,50 +19,54 @@
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 12px;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 40px;
+            padding: 24px 16px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
         h1 {
             color: var(--primary-color);
             text-align: center;
             border-bottom: 3px solid var(--primary-color);
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
         }
         h2 {
             color: #2c3e50;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 8px;
-            margin-top: 40px;
+            margin-top: 30px;
+            font-size: 1.25em;
         }
         h3 {
             color: #34495e;
-            margin-top: 25px;
+            margin-top: 20px;
+            font-size: 1.1em;
         }
         .exam-structure {
             background: #e8f4fd;
-            border-left: 5px solid var(--primary-color);
-            padding: 15px 20px;
-            margin-bottom: 30px;
+            border-left: 4px solid var(--primary-color);
+            padding: 12px 15px;
+            margin-bottom: 20px;
             border-radius: 4px;
         }
         .exam-structure ul {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 18px;
         }
         .question-card {
             background: #fafbfc;
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 16px;
+            margin-bottom: 18px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
         .options-list {
@@ -77,6 +81,7 @@
             font-weight: bold;
             color: var(--secondary-color);
             margin-top: 10px;
+            word-wrap: break-word;
         }
         .explanation {
             color: #555;
@@ -90,19 +95,31 @@
         .case-study {
             background: #f1f8ff;
             border-left: 4px solid #0366d6;
-            padding: 15px 20px;
+            padding: 12px 15px;
             margin-bottom: 15px;
             border-radius: 4px;
         }
         .cheat-sheet {
             background: #e6f4ea;
             border: 1px solid #ceead6;
-            padding: 20px;
+            padding: 16px;
             border-radius: 6px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .cheat-sheet ul {
-            padding-left: 20px;
+            padding-left: 18px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 6px;
+            }
+            .container {
+                padding: 16px 12px;
+            }
+            .question-card {
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -266,371 +283,3 @@
             <li>B. It must appreciate immediately.</li>
             <li>C. The exchange rate can never change.</li>
             <li>D. Inflation has no relationship with exchange rates.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: A. The domestic currency tends to depreciate over time.</div>
-        <div class="explanation">Explanation: Approximately, %ΔE = domestic inflation - foreign inflation. Higher domestic inflation tends to make E rise.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 13. Which belongs to the current account of the balance of payments?</strong></p>
-        <ul class="options-list">
-            <li>A. Only purchases of foreign shares.</li>
-            <li>B. Only central bank reserves.</li>
-            <li>C. Only foreign direct investment.</li>
-            <li>D. Trade in goods and services, income, and current transfers.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: D. Trade in goods and services, income, and current transfers.</div>
-        <div class="explanation">Explanation: The current account includes trade, income, and current transfers such as qualifying remittances.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 14. What is mainly recorded in the financial account?</strong></p>
-        <ul class="options-list">
-            <li>A. Domestic consumer spending.</li>
-            <li>B. Cross-border financial investment and transactions in financial assets.</li>
-            <li>C. Government tax revenue only.</li>
-            <li>D. Prices of exported goods.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: B. Cross-border financial investment and transactions in financial assets.</div>
-        <div class="explanation">Explanation: Examples include foreign direct investment, portfolio investment, and other financial flows.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 15. What is the main idea of Interest Rate Parity (IRP)?</strong></p>
-        <ul class="options-list">
-            <li>A. Every country must have the same interest rate.</li>
-            <li>B. Exchange rates never change when interest rates change.</li>
-            <li>C. Interest-rate differences are linked to exchange-rate relationships, limiting risk-free arbitrage.</li>
-            <li>D. Foreign investments always earn higher returns.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: C. Interest-rate differences are linked to exchange-rate relationships, limiting risk-free arbitrage.</div>
-        <div class="explanation">Explanation: Covered IRP links domestic and foreign interest rates with spot and forward exchange rates, subject to market conditions.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 16. What distinguishes Covered IRP from Uncovered IRP?</strong></p>
-        <ul class="options-list">
-            <li>A. Covered IRP uses a forward contract to hedge exchange-rate risk.</li>
-            <li>B. Covered IRP ignores interest rates.</li>
-            <li>C. It applies only without foreign investment.</li>
-            <li>D. It requires fixed exchange rates.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: A. Covered IRP uses a forward contract to hedge exchange-rate risk.</div>
-        <div class="explanation">Explanation: A forward contract sets a rate for a future transaction; uncovered IRP uses an expected future spot rate instead.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 17. Under Uncovered IRP, which exchange rate is used to assess expected future returns?</strong></p>
-        <ul class="options-list">
-            <li>A. A guaranteed future rate.</li>
-            <li>B. A permanently fixed rate.</li>
-            <li>C. A randomly selected rate.</li>
-            <li>D. The expected future spot exchange rate.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: D. The expected future spot exchange rate.</div>
-        <div class="explanation">Explanation: Because the future spot rate is uncertain, the realized foreign investment return may differ from the expected return.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 18. What does the J-curve effect explain?</strong></p>
-        <ul class="options-list">
-            <li>A. Exports must always equal imports.</li>
-            <li>B. Depreciation may initially worsen the trade balance before improving it later.</li>
-            <li>C. Central banks cannot change interest rates.</li>
-            <li>D. Inflation is always zero under fixed exchange rates.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: B. Depreciation may initially worsen the trade balance before improving it later.</div>
-        <div class="explanation">Explanation: Contracts and slow quantity adjustments can cause the import bill to rise before trade quantities respond.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 19. Under a floating exchange rate, what may follow expansionary monetary policy, other things equal?</strong></p>
-        <ul class="options-list">
-            <li>A. The exchange rate becomes permanently fixed.</li>
-            <li>B. Capital flows and exchange rates no longer matter.</li>
-            <li>C. Lower interest rates may encourage outflows and depreciation, potentially supporting net exports.</li>
-            <li>D. Imports automatically fall to zero.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: C. Lower interest rates may encourage outflows and depreciation, potentially supporting net exports.</div>
-        <div class="explanation">Explanation: The effect depends on economic conditions, but interest rates can influence capital flows and exchange rates.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 20. What is the Impossible Trinity?</strong></p>
-        <ul class="options-list">
-            <li>A. Choosing between exports, imports, and consumption.</li>
-            <li>B. Inability to achieve full employment, zero inflation, and zero taxes simultaneously.</li>
-            <li>C. Inability to maintain a fixed exchange rate, free capital mobility, and independent monetary policy simultaneously.</li>
-            <li>D. A requirement that every country have three currencies.</li>
-        </ul>
-        <div class="correct-answer">Correct answer: C. Inability to maintain a fixed exchange rate, free capital mobility, and independent monetary policy simultaneously.</div>
-        <div class="explanation">Explanation: A country must give up at least one of these three policy goals.</div>
-    </div>
-
-
-    <!-- PART 2 -->
-    <h2>Part 2: True or False (20)</h2>
-    <p><em>Decide whether each statement is True or False.</em></p>
-
-    <div class="question-card">
-        <div class="tf-statement">1. An open economy participates in international trade and financial flows.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: An open economy interacts with the rest of the world through trade, investment, and cross-border transactions.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">2. Net exports equal imports minus exports.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: Net exports equal exports minus imports: NX = X - M.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">3. In the open-economy GDP equation, imports are subtracted.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: GDP = C + I + G + (X - M) imports are subtracted to remove foreign-produced goods and services.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">4. When the riel appreciates against the US dollar, one US dollar buys more riels.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: An appreciating riel means one USD buys fewer riels.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">5. The nominal exchange rate directly adjusts for price-level differences.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: The real exchange rate adjusts the nominal rate for relative price levels.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">6. REER accounts for exchange-rate movements and relative price or cost differences.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: REER adjusts an effective exchange-rate measure for relative prices or costs.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">7. NEER measures a currency only against the US dollar.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: NEER is a weighted average against a basket of currencies.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">8. Greater demand for a currency tends to cause appreciation, other things equal.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: Increased demand puts upward pressure on the currency's value.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">9. Depreciation guarantees an immediate improvement in the trade balance.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: The J-curve explains why the trade balance may worsen before improving.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">10. The balance of payments records transactions between a country and the rest of the world.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: It systematically records international transactions.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">11. The current account mainly records foreign direct investment and purchases of financial assets.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: These generally belong to the financial account; the current account records goods, services, income, and current transfers.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">12. The financial account relates to cross-border investment and financial asset transactions.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: Examples include direct investment, portfolio investment, and other financial flows.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">13. Absolute PPP suggests comparable baskets should have equal prices in a common currency under ideal assumptions.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: Absolute PPP links the exchange rate to the ratio of price levels.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">14. Relative PPP relates exchange-rate changes to inflation differences.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: Exchange-rate changes are approximately related to domestic inflation minus foreign inflation under the stated quote convention.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">15. PPP always holds exactly in the short run.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: Transport costs, trade barriers, non-tradable goods, and slow price adjustment create deviations.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">16. IRP links interest rates with spot and forward exchange rates.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: Covered IRP links interest-rate differences to the forward premium or discount.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">17. Covered IRP leaves the investor exposed to the future spot rate by definition.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: A forward contract hedges the future conversion rate.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">18. Uncovered IRP guarantees exactly equal realized investment returns.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: The actual future spot rate may differ from the expected rate.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">19. Under floating exchange rates, monetary policy can affect output through interest rates, capital flows, and exchange rates.</div>
-        <div class="correct-answer">Answer: True.</div>
-        <div class="explanation">Explanation: These channels can affect net exports and aggregate demand.</div>
-    </div>
-
-    <div class="question-card">
-        <div class="tf-statement">20. With free capital mobility, a country can maintain a fixed exchange rate and fully independent monetary policy without a trade-off.</div>
-        <div class="correct-answer">Answer: False.</div>
-        <div class="explanation">Explanation: The Impossible Trinity says all three goals cannot be maintained simultaneously.</div>
-    </div>
-
-
-    <!-- PART 3 -->
-    <h2>Part 3: Questions &amp; Answers (4)</h2>
-    <p><em>Use the model answers to practice explaining concepts in your own words.</em></p>
-
-    <div class="question-card">
-        <p><strong>Question 1. Explain the differences between the nominal exchange rate, real exchange rate, NEER, and REER.</strong></p>
-        <div class="correct-answer">Answer:</div>
-        <p>The nominal exchange rate is the price of one currency in another, such as 1 USD = 4,100 KHR. The real exchange rate adjusts the nominal rate for relative price levels and helps compare relative prices and competitiveness. The Nominal Effective Exchange Rate (NEER) is a weighted average of exchange rates against major trading partners. The Real Effective Exchange Rate (REER) further adjusts an effective rate for relative prices or costs.</p>
-        <div class="explanation">Brief explanation: The nominal rate is a quoted currency value; the real rate also considers prices. Effective measures cover a basket of trading-partner currencies rather than only one.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 2. Explain PPP and the difference between Absolute PPP and Relative PPP.</strong></p>
-        <div class="correct-answer">Answer:</div>
-        <p>Purchasing Power Parity (PPP) is the theory that exchange rates are related to the purchasing power of currencies. Absolute PPP suggests comparable baskets should have the same price in a common currency under ideal assumptions. If E is domestic currency per unit of foreign currency, E_PPP = P_d / P_f. Relative PPP focuses on changes over time: %ΔE = π_d - π_f. For example, if domestic inflation is 6% and foreign inflation is 2%, E is expected to rise by about 4%, implying domestic-currency depreciation under this quotation convention.</p>
-        <div class="explanation">Brief explanation: Absolute PPP compares price levels at a point in time; Relative PPP relates inflation differences to exchange-rate changes. Actual rates can deviate, especially in the short run.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 3. What is the Balance of Payments? Explain its three main accounts as presented in the chapter.</strong></p>
-        <div class="correct-answer">Answer:</div>
-        <p>The Balance of Payments (BOP) systematically records a country's economic transactions with the rest of the world over a period. The current account records goods, services, income, and current transfers. The capital account records capital transfers and transactions involving certain non-produced, non-financial assets. The financial account records cross-border financial investment and financial asset transactions, including direct investment, portfolio investment, and other financial flows.</p>
-        <div class="explanation">Brief explanation: The accounts classify different types of international transactions. Trade and investment transactions can create demand for, or supply of, foreign currencies.</div>
-    </div>
-
-    <div class="question-card">
-        <p><strong>Question 4. Explain the main exchange-rate regimes and the Impossible Trinity.</strong></p>
-        <div class="correct-answer">Answer:</div>
-        <p>A fixed exchange rate is maintained at a target value or within a narrow range by the monetary authority. A floating exchange rate is primarily determined by market supply and demand. A managed float is mainly market-driven, but the monetary authority may intervene. The Impossible Trinity says a country cannot simultaneously maintain a fixed exchange rate, free capital mobility, and independent monetary policy; it must give up at least one goal.</p>
-        <div class="explanation">Brief explanation: Exchange-rate regimes determine how much flexibility the currency has and how much control the monetary authority can exercise over monetary conditions.</div>
-    </div>
-
-
-    <!-- PART 4 -->
-    <h2>Part 4: Case Studies (4)</h2>
-    <p><em>Show calculation steps for numerical questions.</em></p>
-
-    <div class="question-card">
-        <h3>Case Study 1: Currency Conversion, Appreciation, and Depreciation</h3>
-        <div class="case-study">
-            <strong>Scenario:</strong> A Cambodian importer must pay $2,000. The rate changes from 1 USD = 4,100 KHR to 1 USD = 4,300 KHR.
-            <ol>
-                <li>Calculate the original cost in riels.</li>
-                <li>Calculate the new cost and the increase.</li>
-                <li>Did the riel appreciate or depreciate? What are likely trade effects?</li>
-            </ol>
-        </div>
-        <div class="correct-answer">Answers and Explanations:</div>
-        <ol>
-            <li>$2,000 × 4,100 = 8,200,000 KHR. (Explanation: Multiply the USD payment by the KHR-per-USD rate).</li>
-            <li>$2,000 × 4,300 = 8,600,000 KHR. Increase = 8,600,000 - 8,200,000 = 400,000 KHR. (Explanation: The importer needs 400,000 more riels to make the same USD payment).</li>
-            <li>The riel depreciated. Dollar-priced imports become more expensive for Cambodian buyers, while Cambodian goods may become cheaper for foreign buyers. Net exports may improve over time if quantities respond sufficiently. (Explanation: Depreciation changes relative prices, but trade quantities and contracts may adjust slowly).</li>
-        </ol>
-    </div>
-
-    <div class="question-card">
-        <h3>Case Study 2: Purchasing Power Parity (PPP)</h3>
-        <div class="case-study">
-            <strong>Scenario:</strong> A basket costs 400,000 KHR in Cambodia and $100 in the US. The market rate is 1 USD = 4,100 KHR.
-            <ol>
-                <li>Calculate the PPP exchange rate.</li>
-                <li>Compare the market rate with PPP.</li>
-                <li>Why can the market rate differ from PPP?</li>
-            </ol>
-        </div>
-        <div class="correct-answer">Answers and Explanations:</div>
-        <ol>
-            <li>E_PPP = 400,000 KHR / $100 = 4,000 KHR/USD. (Explanation: Divide the domestic basket price by the foreign basket price under this quotation convention).</li>
-            <li>Difference = 4,100 - 4,000 = 100 KHR/USD. Percentage difference relative to PPP = (100 ÷ 4,000) × 100 = 2.5%. (Explanation: The market rate is 2.5% higher than the PPP benchmark; under this simplified comparison, the riel is weaker relative to the dollar than the PPP benchmark suggests).</li>
-            <li>Reasons include transport costs, tariffs, trade barriers, product-quality differences, non-tradable goods and services, capital flows, interest rates, expectations, and speculation. (Explanation: PPP is a benchmark, not a guarantee that the market rate equals the PPP rate at every moment).</li>
-        </ol>
-    </div>
-
-    <div class="question-card">
-        <h3>Case Study 3: Interest Rate Parity and Foreign Investment</h3>
-        <div class="case-study">
-            <strong>Scenario:</strong> An investor has $10,000. US interest is 5%; euro interest is 3%. Spot rate: 1 USD = 0.90 EUR. One-year forward rate: 1 USD = 0.883 EUR. Ignore taxes and transaction costs.
-            <ol>
-                <li>Calculate the domestic investment's final value.</li>
-                <li>Calculate the foreign investment's final value in euros.</li>
-                <li>Convert the foreign investment back to dollars using the forward rate.</li>
-                <li>Why is a forward contract important?</li>
-            </ol>
-        </div>
-        <div class="correct-answer">Answers and Explanations:</div>
-        <ol>
-            <li>$10,000 × (1 + 0.05) = $10,500. (Explanation: The investor earns $500 interest over one year).</li>
-            <li>Initial euros = $10,000 × 0.90 = €9,000. Final value = €9,000 × 1.03 = €9,270. (Explanation: The euro investment earns €270 interest over one year).</li>
-            <li>€9,270 ÷ 0.883 = $10,498.30. This is about $1.70 less than the $10,500 domestic return. (Explanation: The illustrative rates are rounded. In a frictionless market, Covered IRP links the rates so comparable covered returns are equal).</li>
-            <li>It fixes the future conversion rate for the euro proceeds, reducing exchange-rate uncertainty. (Explanation: Without the forward contract, the dollar value would depend on the future spot rate).</li>
-        </ol>
-    </div>
-
-    <div class="question-card">
-        <h3>Case Study 4: Monetary Policy, Capital Flows, and the J-Curve</h3>
-        <div class="case-study">
-            <strong>Scenario:</strong> Country A has a floating exchange rate. Its central bank cuts the interest rate from 5% to 3%, while the partner's rate remains 4%. The domestic currency depreciates, but trade quantities adjust slowly.
-            <ol>
-                <li>How can the rate cut affect capital flows and the exchange rate?</li>
-                <li>What effects can depreciation have on exports and imports?</li>
-                <li>Why might the trade balance initially deteriorate?</li>
-                <li>How does this illustrate the relationship between monetary policy, exchange rates, and output?</li>
-            </ol>
-        </div>
-        <div class="correct-answer">Answers and Explanations:</div>
-        <ol>
-            <li>Lower relative returns may make domestic assets less attractive and encourage capital outflows, putting downward pressure on the currency. (Explanation: Under a float, market supply and demand determine the exchange rate, and capital flows can affect both).</li>
-            <li>Domestic goods may become cheaper for foreign buyers and foreign goods more expensive for domestic buyers. Exports may rise and imports may fall over time, potentially improving net exports. (Explanation: The final effect depends on quantity responses, production capacity, and other economic conditions).</li>
-            <li>Existing import contracts and export orders may not change immediately. The import bill can rise before quantities adjust. (Explanation: This is the J-curve effect: the trade balance may worsen first and improve later).</li>
-            <li>A rate cut may encourage capital outflows, leading to depreciation. Depreciation can support net exports over time, and changes in investment and net exports can affect aggregate demand and output. (Explanation: In an open economy, monetary policy operates through interest rates, capital flows, exchange rates, and net exports).</li>
-        </ol>
-    </div>
-
-
-    <!-- FINAL REVISION SHEET -->
-    <div class="cheat-sheet">
-        <h2>Final Revision Sheet - Key Formulas</h2>
-        <ul>
-            <li><strong>1. Net Exports:</strong> Exports minus imports. (NX = X - M)</li>
-            <li><strong>2. Open-Economy GDP:</strong> Y = C + I + G + (X - M) (Consumption + investment + government spending + net exports)</li>
-            <li><strong>3. Real Exchange Rate:</strong> q = e × (P* / P) (Use the exchange-rate and price-level convention specified in the question or slides)</li>
-            <li><strong>4. Absolute PPP:</strong> E_PPP = P_d / P_f (For domestic currency per unit of foreign currency, divide the domestic basket price by the foreign basket price)</li>
-            <li><strong>5. Relative PPP:</strong> %ΔE ≈ π_d - π_f (For domestic currency per unit of foreign currency, higher domestic inflation tends to make E rise over time)</li>
-            <li><strong>6. Covered IRP:</strong> 1 + i_d = (F / S)(1 + i_f) (This form assumes F and S are domestic currency per unit of foreign currency)</li>
-            <li><strong>7. One-year Future Value:</strong> Future Value = P(1 + i) (P is the initial principal and i is the annual interest rate in decimal form)</li>
-        </ul>
-
-        <h3 style="margin-top: 20px;">Five Concepts to Remember</h3>
-        <ul>
-            <li><strong>1. Appreciation vs. depreciation:</strong> For a quote in KHR per USD, a rise means the riel depreciates.</li>
-            <li><strong>2. PPP vs. IRP:</strong> PPP connects exchange rates with price levels and inflation; IRP connects interest rates with spot and forward rates.</li>
-            <li><strong>3. Balance of payments:</strong> Know the current, capital, and financial accounts.</li>
-            <li><strong>4. J-curve:</strong> Depreciation may worsen the trade balance initially before improving it later.</li>
-            <li><strong>5. Impossible Trinity:</strong> A country cannot simultaneously maintain a fixed exchange rate, free capital mobility, and independent monetary policy.</li>
-        </ul>
-    </div>
-
-</div>
-
-</body>
-</html>
