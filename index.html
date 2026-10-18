@@ -19,15 +19,16 @@
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
-            padding: 40px 20px;
+            padding: 12px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 40px;
+            padding: 24px 16px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
         h1 {
             color: var(--primary-color);
@@ -35,18 +36,20 @@
             border-bottom: 3px solid var(--primary-color);
             padding-bottom: 10px;
             margin-bottom: 10px;
+            font-size: 1.5em;
         }
         .subtitle {
             text-align: center;
             font-weight: bold;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-size: 0.95em;
         }
         .chapter-card {
             background: #fafbfc;
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 20px;
+            padding: 16px;
             margin-bottom: 15px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -58,7 +61,7 @@
         .chapter-card a {
             text-decoration: none;
             color: var(--primary-color);
-            font-size: 1.15em;
+            font-size: 1.1em;
             font-weight: bold;
             display: block;
         }
@@ -67,15 +70,27 @@
         }
         .chapter-desc {
             color: #666;
-            font-size: 0.95em;
+            font-size: 0.9em;
             margin-top: 5px;
             margin-bottom: 0;
         }
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
             color: #777;
             font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 6px;
+            }
+            .container {
+                padding: 16px 12px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
