@@ -17,7 +17,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 12px;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
@@ -25,44 +25,47 @@
             max-width: 950px;
             margin: auto;
             background: var(--card-bg);
-            padding: 40px;
+            padding: 24px 16px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-sizing: border-box;
         }
         h1 {
             color: var(--primary-color);
             text-align: center;
             margin-bottom: 5px;
+            font-size: 1.5em;
         }
         .subtitle {
             text-align: center;
             color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            margin-bottom: 25px;
+            font-size: 1em;
         }
         h2 {
             color: #202124;
             border-bottom: 3px solid var(--primary-color);
             padding-bottom: 8px;
-            margin-top: 40px;
-            font-size: 1.5em;
+            margin-top: 30px;
+            font-size: 1.25em;
         }
         h3 {
             color: #174ea6;
-            margin-top: 25px;
+            margin-top: 20px;
+            font-size: 1.1em;
         }
         .question-box {
-            margin-bottom: 25px;
-            padding: 20px;
+            margin-bottom: 20px;
+            padding: 16px;
             background: var(--secondary-color);
-            border-left: 5px solid var(--primary-color);
+            border-left: 4px solid var(--primary-color);
             border-radius: 6px;
         }
         .case-box {
-            margin-bottom: 25px;
-            padding: 20px;
+            margin-bottom: 20px;
+            padding: 16px;
             background: #f1f3f4;
-            border-left: 5px solid #5f6368;
+            border-left: 4px solid #5f6368;
             border-radius: 6px;
         }
         ul {
@@ -77,6 +80,7 @@
             font-weight: bold;
             color: var(--accent-color);
             margin-top: 10px;
+            word-wrap: break-word;
         }
         .explanation {
             font-style: italic;
@@ -90,6 +94,18 @@
             border-radius: 4px;
             margin-bottom: 15px;
             border: 1px solid #dadce0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 6px;
+            }
+            .container {
+                padding: 16px 12px;
+            }
+            .question-box, .case-box {
+                padding: 12px;
+            }
         }
     </style>
 </head>
